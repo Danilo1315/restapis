@@ -11,6 +11,11 @@ const router = express.Router();
 
 module.exports = function () {
 
+    // Home
+    router.get('/', (req, res) => {
+        res.json({msg: 'Hello world, Welcome to the restapis!'});
+    });
+
     // Add clientes
     router.post('/clientes', clienteController.nuevoCliente);
 
